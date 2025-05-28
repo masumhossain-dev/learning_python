@@ -6,3 +6,15 @@ def func():
 
 
 func()
+
+#function with paramiter in python
+def adder(a, b):
+    print(a+b)
+
+adder(10, 20)
+
+#with return
+def multi(a, b):
+    return a*b
+
+print(multi(10, 3))
