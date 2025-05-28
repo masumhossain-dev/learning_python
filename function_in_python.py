@@ -18,3 +18,10 @@ def multi(a, b):
     return a*b
 
 print(multi(10, 3))
+
+
+#return without params
+def add():
+    return 10+20
+
+print(add())
