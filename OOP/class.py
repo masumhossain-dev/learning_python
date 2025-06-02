@@ -1,4 +1,8 @@
+from pyexpat import model
+
+
 class Car:
+    # default constructor
     def __init__(self):
         self.brand = ""
         self.model = ""
@@ -19,3 +23,14 @@ car2.speed = 130
 
 print(car1.brand, car1.model, car1.color, car1.speed)
 print(car2.brand, car2.model, car2.color, car2.speed)
+
+
+# Parameterised constructor 
+
+class Bike:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+car3 = Bike("Honda", "CBR")
+print(car3.brand, car3.model)
