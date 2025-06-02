@@ -1,14 +1,17 @@
 import qrcode
 
-text = input("Enter yout text or link to convert into QR code: ")
-filename = input("Enter your saved file name: ")
+def generate_qr_code(filepath, output_path):
+    with open(filepath, "r") as file:
+        lines = file.readlines()
 
-def generate_qr_code(text, filename):
+        text = lines[0].strip()
+        filename = lines[1].strip()
+
+        output_path_folder = output_path + '/' + filename
+    
     image_QR = qrcode.make(text)
+    image_QR.save(output_path_folder)
+    print(f"QR code generated and saved as {filename}")
 
-    image_QR.save(filename)
-
-generate_qr_code(text, filename)
-    
-    
-
+# Example usage
+generate_qr_code("read_files/url.txt", "QR_outputs")
