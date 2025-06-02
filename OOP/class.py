@@ -34,3 +34,13 @@ class Bike:
 
 car3 = Bike("Honda", "CBR")
 print(car3.brand, car3.model)
+
+
+# Default value construcot
+class Bike2:
+    def __init__(self, brand="Honda", model="CBR"):
+        self.brand = brand
+        self.model = model
+
+car4 = Bike2()
+print(car4.brand, car4.model)

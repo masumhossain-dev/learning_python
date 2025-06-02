@@ -13,5 +13,4 @@ def generate_qr_code(filepath, output_path):
     image_QR.save(output_path_folder)
     print(f"QR code generated and saved as {filename}")
 
-# Example usage
 generate_qr_code("read_files/url.txt", "QR_outputs")
